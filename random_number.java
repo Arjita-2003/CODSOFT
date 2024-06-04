@@ -13,6 +13,7 @@ public class random_number {
         System.out.println("NUMBER GAME");
         System.out.println();
         System.out.println("Guess a number between 0 and 100");
+        System.out.println("---> You have got 5 attempts to try. Best of luck.");
         System.out.println();
 
         Scanner sc = new Scanner(System.in);
@@ -33,7 +34,7 @@ public class random_number {
                     System.out.println("Sorry :( You are out of tries...");
                     System.out.println("The number was "+ random);
                 }
-     
+                 System.out.println();
         }
         
     }
