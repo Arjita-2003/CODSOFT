@@ -1,8 +1,10 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 public class quiz {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Timer t = new Timer();
+
         System.out.println("**********WELCOME**********");
         System.out.println();
         System.out.println("<<<-----Take A QUIZ----->>>");
@@ -16,8 +18,13 @@ public class quiz {
         System.out.println("Choose a number to take the quiz:");
         System.out.println("1. Database Management\n2. Data Structure\n3. Operating System");
         System.out.println();
-
         int q = sc.nextInt();
+        System.out.println();
+        String s = "";
+        System.out.print("Enter your name: ");
+        s = sc.next();
+        System.out.println();
+
         int ans = 0;
         if(q==1){
             char[] correct = {'b','d','d','d','c'};
@@ -92,7 +99,9 @@ public class quiz {
                 System.out.println("Correct Answer: " + 'c');
             }
 
-            System.out.println("Your Score: " + ans);
+            System.out.println();
+            System.out.println("-----" + s + "-----");
+            System.out.println("You Scored: " + ans);
             System.out.println();
             System.out.println("***Summary***");
             System.out.println("Your Answer: ");
@@ -181,7 +190,9 @@ public class quiz {
                 System.out.println("Correct Answer: " + 'b');
             }
 
-            System.out.println("Your Score: " + ans);
+            System.out.println();
+            System.out.println("-----" + s + "-----");
+            System.out.println("You Scored: " + ans);
             System.out.println();
             System.out.println("***Summary***");
             System.out.println("Your Answer: ");
@@ -268,7 +279,8 @@ public class quiz {
                 System.out.println("Correct Answer: " + 'd');
             }
             System.out.println();
-            System.out.println("Your Score: " + ans);
+            System.out.println("-----" + s + "-----");
+            System.out.println("You Scored: " + ans);
             System.out.println();
             System.out.println("***Summary***");
             System.out.println("Your Answer: ");
