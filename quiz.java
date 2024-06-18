@@ -14,7 +14,7 @@ public class quiz {
         System.out.println();
         System.out.println();
         System.out.println("Choose a number to take the quiz:");
-        System.out.println("1. DBMS\n2. DSA\n3. GK");
+        System.out.println("1. Database Management\n2. Data Structure\n3. Operating System");
         System.out.println();
 
         int q = sc.nextInt();
