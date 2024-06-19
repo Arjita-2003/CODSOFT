@@ -17,25 +17,46 @@ public class random_number {
         System.out.println();
 
         Scanner sc = new Scanner(System.in);
-
+        int score = 10;
         for(int i=0;i<5;i++){
                 int n = sc.nextInt();
                 if(n == random){
                     System.out.println("WOAH!!! You are right");
-                    break;
+                    System.out.println("You scored: " + score);
+                    i = 4;
                 }
                 else if(n<random && i<4){
                     System.out.println("Oops! Try a higher number");
                 }
                 else if(n>random && i<4){
-                    System.out.println("Oops! Try a lower number");
+                    System.out.println("Oops! Try a lower number");   
                 }
                 else if(i==4){
                     System.out.println("Sorry :( You are out of tries...");
                     System.out.println("The number was "+ random);
                 }
-                 System.out.println();
+                score -= 2;
+                System.out.println();
+
+                if(i==4){
+                    System.out.println();
+                    System.out.println("Do you want to play again?");
+                    System.out.println("1. YES      2. NO");
+                    int t = sc.nextInt();
+                    random = rand.nextInt(100);
+                    if(t==1){
+                        System.out.println("Guess a number between 0 and 100");
+                        i = 0;
+                        score = 10;
+                    }
+                    else {
+                        break;
+                    }
+                }
+
         }
+        System.out.println();
+        System.out.println("Thanks for playing...");
         
     }
 }
